@@ -8,7 +8,8 @@ public class Chatroom {
 		Manish.notice("Department will be closed tomorrow.");
 		Manish.notice("Oopsis! its open again.");
 		System.out.println(Narayan.get_all_messages());
-		
-		
+		Manish.delete_message(0);
+		System.out.println(Narayan.get_all_messages());
+	
 	}
 }

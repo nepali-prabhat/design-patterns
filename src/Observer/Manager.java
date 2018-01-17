@@ -21,11 +21,6 @@ public class Manager implements ISubject{
 				x.update(message);
 			}
 		}
-		public void notify_to(Observer observer) {
-			int index = this.observer.indexOf(observer);
-			this.observer.get(index).update(message);
-		}
-		
 		public void notice(String message) {
 			this.message = message;
 			notify_to_all();
@@ -34,5 +29,10 @@ public class Manager implements ISubject{
 			return this.message;
 		}
 		
-		
+		public void delete_message(int index) {
+			for(Observer x : observer) {
+				x.delete_message(index);
+			}
+			
+		}
 }

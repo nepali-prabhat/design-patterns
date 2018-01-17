@@ -3,7 +3,7 @@ package Observer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Client implements Observer{
+public class Client implements Observer, Message{
 
 	private List<String> message = new ArrayList<String>();
 	
